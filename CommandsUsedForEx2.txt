@@ -1,0 +1,4 @@
+db.users.insertOne({ username: "janedoe", email: "janedoe@test.com", password: "pass123", profile_image_url: "https://test-fake-url.com/janedoe.jpg", created_at: new Date() })
+db.posts.insertOne({ user_id: ObjectId("685e072f1c125b975abbf67b"), title: "first example post", description: "here is my first post for the blogging app", image_url: "https://example.com/post.jpg", post_time: new Date() })
+db.comments.insertOne({ posts_id: ObjectId("685e09b6dee53f783983aa9a"), user_id: ObjectId("685e072f1c125b975abbf67b"), comment_text: "cool post!", comment_time: new Date()})
+db.likes.insertOne({ post_id: ObjectId("685e09b6dee53f783983aa9a"), user_id: ObjectId("685e072f1c125b975abbf67b"), liked_time: new Date()})
